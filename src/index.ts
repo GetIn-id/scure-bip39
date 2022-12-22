@@ -42,6 +42,19 @@ export function generateMnemonic(wordlist: string[], strength: number = 128): st
   return entropyToMnemonic(randomBytes(strength / 8), wordlist);
 }
 
+/**
+ * Generate x random words. Uses Cryptographically-Secure Random Number Generator.
+ * @param wordlist imported wordlist for specific language
+ * @param randomBytesArray random byes array
+ * @example
+ * generateMnemonic(wordlist, uint8Array)
+ * // 'legal winner thank year wave sausage worth useful legal winner thank yellow'
+ */
+export function generateMnemonicFromRandomBytes(wordlist: string[], randomBytesArray: Uint8Array): string {
+  if ((randomBytesArray.length * 8) % 32 !== 0 || (randomBytesArray.length * 8) > 256) throw new TypeError('Invalid entropy');
+  return entropyToMnemonic(randomBytesArray, wordlist);
+}
+
 const calcChecksum = (entropy: Uint8Array) => {
   // Checksum is ent.length/4 bits long
   const bitsLeft = 8 - entropy.length / 4;
