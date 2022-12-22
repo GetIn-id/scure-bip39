@@ -50,8 +50,12 @@ export function generateMnemonic(wordlist: string[], strength: number = 128): st
  * generateMnemonic(wordlist, uint8Array)
  * // 'legal winner thank year wave sausage worth useful legal winner thank yellow'
  */
-export function generateMnemonicFromRandomBytes(wordlist: string[], randomBytesArray: Uint8Array): string {
-  if ((randomBytesArray.length * 8) % 32 !== 0 || (randomBytesArray.length * 8) > 256) throw new TypeError('Invalid entropy');
+export function generateMnemonicFromRandomBytes(
+  wordlist: string[],
+  randomBytesArray: Uint8Array
+): string {
+  if ((randomBytesArray.length * 8) % 32 !== 0 || randomBytesArray.length * 8 > 256)
+    throw new TypeError('Invalid entropy');
   return entropyToMnemonic(randomBytesArray, wordlist);
 }
 
