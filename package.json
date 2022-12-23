@@ -1,5 +1,5 @@
 {
-  "name": "@scure/bip39",
+  "name": "@getin-id/bip39",
   "version": "1.1.0",
   "description": "Secure, audited & minimal implementation of BIP39 mnemonic phrases",
   "main": "index.js",
@@ -24,7 +24,7 @@
   "homepage": "https://paulmillr.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/paulmillr/scure-bip39.git"
+    "url": "https://github.com/GetIn-id/scure-bip39.git"
   },
   "contributors": [
     {
