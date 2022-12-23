@@ -45,7 +45,7 @@ export function generateMnemonic(wordlist: string[], strength: number = 128): st
 /**
  * Generate x random words. Uses Cryptographically-Secure Random Number Generator.
  * @param wordlist imported wordlist for specific language
- * @param randomBytesArray random byes array
+ * @param randomBytesArray random bytes array
  * @example
  * generateMnemonic(wordlist, uint8Array)
  * // 'legal winner thank year wave sausage worth useful legal winner thank yellow'
