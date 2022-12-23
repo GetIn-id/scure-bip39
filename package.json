@@ -1,6 +1,6 @@
 {
   "name": "@getin-id/bip39",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Secure, audited & minimal implementation of BIP39 mnemonic phrases",
   "main": "index.js",
   "files": [
